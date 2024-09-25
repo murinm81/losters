@@ -1,0 +1,6 @@
+/* Justificar todo o texto nos artigos */
+article p {
+    text-align: justify;
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
