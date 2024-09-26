@@ -20,6 +20,12 @@ header {
   text-align: center;
   font-size: 35px;
   color: white;
+  position: relative;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -94,11 +100,8 @@ footer {
 </head>
 <body>
 
-<h2>CSS Layout Float</h2>
-<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
-
 <header>
+  <img src="Head_lost.jpg" alt="Lost Cast Image">
   <h2>Losters</h2>
 </header>
 
@@ -127,7 +130,7 @@ footer {
            <ol>
   				<li>Jack Shephard</li>
                 <div class="profile-container">
-                    <img src="jack-shephard.jpg" alt="Jack Shephard">
+                    <img src="jack-shephard.png" alt="Jack Shephard">
                     <ul class="profile-info">
                         <b><li>Descrição:</li></b> 
                         <p>Jack é um cirurgião que rapidamente assume o papel de líder entre os sobreviventes do voo Oceanic 815. Com seu instinto de proteger e salvar os outros, ele é o primeiro a socorrer os feridos após o acidente.</p>
