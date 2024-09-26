@@ -1,50 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losters</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Flexbox container to align image and text side by side */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.profile-container img {
+  width: 150px; /* Adjust the width of the image */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Style for description */
+.profile-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Losters - seu blog sobre Lost</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="blog-posts">
-        <article>
-            <h2>Primeiro epsódio, temporada 1</h2>
-            <p>Publicado em 25 de setembro de 2024</p>
-            <p>Acordei de repente no meio de uma confusão. Tudo ao meu redor estava destruído, pedaços de avião espalhados pela areia, gritos e o 
-                som do oceano batendo forte. Eu estava no meio de uma praia, sem saber exatamente como cheguei ali, e meus sentidos estavam a mil. 
-                Quando me levantei, percebi que tinha acabado de sobreviver a um acidente de avião. O pânico tomou conta de mim enquanto olhava ao redor. 
-                Havia pessoas feridas, algumas tentando ajudar outras, enquanto alguns ainda estavam em choque, completamente desorientados. Eu não podia 
-                parar, havia muita coisa acontecendo. Comecei a ajudar como pude. Eu vi um homem sendo esmagado pelos destroços e consegui tirá-lo dali. 
-                Vi também uma mulher grávida, Claire, que estava prestes a dar à luz, e um cachorro vagando pela praia. Foi nesse momento que me dei 
-                conta de que éramos sobreviventes, mas estávamos presos em uma ilha. Logo me juntei a outros para tentar entender o que fazer. 
-                No meio dessa loucura, conheci algumas das pessoas que estavam no voo. Sayid, um ex-militar que parecia ter uma ideia de como manter a calma; 
-                Sawyer, um homem durão com um jeito grosseiro; Kate, que se mostrou uma peça importante para manter as coisas funcionando. 
-                Também havia um médico, Jack, que liderava as tentativas de resgate e primeiros socorros. No meio do caos, Jack, Kate e Charlie 
-                decidiram tentar encontrar a cabine do avião na selva, na esperança de localizar o transmissor. Durante essa caminhada, 
-                algo estranho aconteceu: um barulho ensurdecedor e assustador começou a ecoar pela floresta, como se algo enorme estivesse se movendo por lá, 
-                quebrando árvores. Não vimos o que era, mas sabíamos que havia algo muito perigoso escondido na ilha. A sensação era de que, 
-                além de estarmos isolados em um lugar desconhecido, havia algo mais, algo que não podíamos entender, e nossa luta por sobrevivência 
-                estava apenas começando.</p>
-            <img src="S01E01.jpg" alt="Imagem relacionada ao post"> <!-- Insira a imagem -->
-        </article>
+<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
 
+<header>
+  <h2>Losters</h2>
+</header>
 
-    </section>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Primeiro epsódio, temporada 1</h1>
+    <p> O primeiro episódio de Lost, intitulado "Pilot – Part 1", começa com uma cena dramática de caos e desespero. O protagonista, Jack Shephard, acorda atordoado em uma selva densa, com ferimentos no corpo. Ele se levanta e corre até a praia, onde descobre a cena aterrorizante de um desastre de avião. O voo Oceanic 815 caiu em uma ilha deserta, deixando os sobreviventes lutando por suas vidas em meio aos destroços e feridos.</p>
+    </p>Ao chegar na praia, Jack imediatamente assume o papel de líder, usando suas habilidades como médico para socorrer os feridos. Ele salva uma mulher chamada Rose, que está inconsciente, e rapidamente começa a organizar os outros sobreviventes. <i><strong>Essa introdução é brilhante na forma como estabelece rapidamente o caos da situação e a natureza do personagem de Jack como líder, sem precisar de muita exposição. O uso de um ambiente aberto como a praia amplifica o sentimento de vulnerabilidade e desespero, enquanto a direção do episódio aproveita ao máximo o cenário e os efeitos práticos do desastre.</strong></i></p>
+    </p>Jack logo conhece Kate Austen, uma mulher que também sobreviveu ao acidente. Ela o ajuda a costurar um ferimento em suas costas, iniciando uma conexão que será importante para a trama. Ao longo do episódio, somos apresentados a outros personagens principais, como o temperamental Sawyer, o ex-militar Sayid, o roqueiro problemático Charlie, e Claire, que está grávida e em choque após o acidente. <i><strong>A apresentação dos personagens é bem dosada e criativa, com pequenas interações que revelam suas personalidades sem interromper o ritmo frenético do episódio. O equilíbrio entre ação e desenvolvimento de personagens é um dos pontos fortes do episódio.</strong></i> </p>
+    </p> À medida que o episódio avança, os sobreviventes percebem que estão completamente isolados, sem nenhum sinal de resgate à vista. Jack, Kate e Charlie decidem sair em busca da cabine do avião, que caiu na selva, na esperança de encontrar o transmissor de rádio para enviar um pedido de socorro.</p>
+    </p>Durante essa jornada, os três enfrentam o primeiro de muitos mistérios da ilha: um som ensurdecedor vindo das profundezas da selva. Eles ouvem árvores sendo arrancadas e o barulho de algo gigantesco se movendo. Embora não consigam ver o que é, a tensão aumenta, deixando claro que a ilha abriga perigos desconhecidos.  <i><strong>Este momento é especialmente eficaz, pois eleva o suspense e cria uma atmosfera de mistério sem fornecer respostas imediatas, um dos grandes atrativos de Lost. A escolha de não mostrar a criatura, mas apenas sugerir sua presença, intensifica o suspense e mantém o público intrigado.</strong></i> </p>
+        </p>Após encontrarem a cabine, eles descobrem o piloto do avião milagrosamente vivo, mas gravemente ferido. Ele explica que o avião estava fora de rota e, portanto, as equipes de busca não os encontrariam. Pouco tempo depois, o piloto é brutalmente atacado e arrastado por uma criatura desconhecida, desaparecendo na floresta.  <i><strong>Essa cena é um momento chave do episódio, onde o mistério da ilha toma um rumo mais sombrio. A brutalidade do ataque e a forma súbita como acontece prendem a atenção do público e aumentam o senso de urgência e perigo.</strong></i> </p>
+          </p>O episódio termina com o grupo voltando à praia, carregando a tensão do que descobriram. O que era uma luta pela sobrevivência após um desastre aéreo comum, agora se transforma em uma batalha contra os mistérios e horrores da ilha. <i><strong>O encerramento do episódio é um ótimo gancho, deixando o público com uma mistura de medo e curiosidade sobre o que está por vir. A montagem é eficaz ao criar uma atmosfera de incerteza que se torna a marca registrada da série.</strong></i> </p>
+          </p> <i><strong>Crítica: O episódio piloto de Lost é uma aula de como capturar a atenção do público com uma narrativa dinâmica e personagens cativantes. Ele estabelece um equilíbrio entre a ação intensa do desastre e os mistérios que se desenrolam na ilha, sem sacrificar o desenvolvimento de seus personagens centrais. No entanto, é possível que o episódio tenha deixado algumas questões grandes demais sem resposta, o que pode frustrar espectadores que esperavam por resoluções rápidas. Mas essa escolha é intencional, uma vez que a série se baseia em manter o suspense ao longo de suas temporadas. O ritmo ágil e a direção criativa garantem que o primeiro episódio seja um excelente ponto de partida para uma série que se tornaria icônica.</strong></i> </p>
+          
+           </p> <i><strong>Glossário:</strong></i> </p>
+           
+           <ol>
+  				<li>Jack Shephard</li>
+                <div class="profile-container">
+                    <img src="jack-shephard.jpg" alt="Jack Shephard">
+                    <ul class="profile-info">
+                        <b><li>Descrição:</li></b> 
+                        <p>Jack é um cirurgião que rapidamente assume o papel de líder entre os sobreviventes do voo Oceanic 815. Com seu instinto de proteger e salvar os outros, ele é o primeiro a socorrer os feridos após o acidente.</p>
+                        <b><li>Características principais:</li></b> 
+                        <p>Líder natural, corajoso, altruísta, com um forte senso de responsabilidade.</p>
+                    </ul>
+                </div>
+                
+                <li>Kate Austen</li>
+                <ul>
+  <b><li>Descrição:</li></b> Kate é uma mulher misteriosa com um passado obscuro, que se destaca pela sua habilidade de se adaptar às situações mais desafiadoras. No episódio piloto, ela ajuda Jack a tratar seu próprio ferimento e se torna uma de suas principais aliadas.
+  <b><li>Características princípais:</li></b> Resiliente, engenhosa, misteriosa, com uma forte habilidade de sobrevivência.
+				</ul>
+                
+                 <li>Charlie Pace</li>
+                <ul>
+  <b><li>Descrição:</li></b>  Charlie é o ex-vocalista de uma banda de rock em declínio, Drive Shaft, que luta contra o vício em drogas. Ele se junta a Jack e Kate na missão para encontrar o transmissor na cabine do avião.
+  <b><li>Características princípais:</li></b> Impulsivo, vulnerável, carismático, mas lidando com sérios problemas pessoais.
+				</ul>
+                
+                <li>Sawyer (James Ford)</li>
+                <ul>
+  <b><li>Descrição:</li></b>  Sawyer é um sobrevivente com uma personalidade durona e cínica. Ele rapidamente demonstra ser rude e egoísta, mas sua complexidade vai além dessas características iniciais.
+  <b><li>Características princípais:</li></b> Sarcástico, individualista, manipulador, com uma atitude rebelde.
+				</ul>
+                
+                <li>Sayid Jarrah</li>
+                <ul>
+  <b><li>Descrição:</li></b>  Sayid é um ex-oficial de comunicações do exército iraquiano. Ele usa suas habilidades técnicas e de liderança para ajudar os outros sobreviventes a improvisar meios de comunicação.
+  <b><li>Características princípais:</li></b> Inteligente, estrategista, pragmático, leal, com uma forte moralidade.
+				</ul>
+                
+                <li>Claire Littleton</li>
+                <ul>
+  <b><li>Descrição:</li></b>  Claire é uma mulher grávida que sobrevive ao acidente. Em estado de choque no primeiro episódio, ela precisa de cuidados especiais devido à sua condição.
+  <b><li>Características princípais:</li></b> Frágil, sensível, gentil, mas com grande força emocional.
+				</ul>
+                
+                <li>Michael Dawson</li>
+                <ul>
+  <b><li>Descrição:</li></b>  Michael é um pai solteiro que está viajando com seu filho, Walt. Ele está visivelmente nervoso e preocupado com o bem-estar de Walt após o acidente.
+  <b><li>Características princípais:</li></b> Protetor, dedicado ao filho, inseguro sobre seu papel como pai.
+				</ul>
+                
+                <li>Walt Lloyd</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Walt é o filho de Michael, um garoto de 10 anos que está assustado e confuso com a situação. Sua relação com o pai, que é complicada, começa a se desenvolver à medida que os dois tentam sobreviver.
+  <b><li>Características princípais:</li></b> Curioso, inocente, reservado.
+				</ul>
+                
+                <li>John Locke</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Locke é um dos sobreviventes mais enigmáticos. Embora não tenha destaque imediato no primeiro episódio, sua presença é marcante. Ele observa os eventos ao seu redor com calma, sugerindo que há algo de especial em sua percepção da situação.
+  <b><li>Características princípais:</li></b> Misterioso, calmo, introspectivo, espiritualmente inclinado.
+				</ul>
+                
+                <li>Hurley (Hugo Reyes)</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Hurley é um sobrevivente de boa índole, com uma personalidade amigável e descontraída. Ele ajuda como pode, mas sua principal contribuição inicial é seu humor e simpatia em uma situação tão trágica.
+  <b><li>Características princípais:</li></b>  Generoso, otimista, amável, com um senso de humor peculiar.
+				</ul>
+                
+                <li>Shannon Rutherford</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Shannon é uma jovem mulher que parece despreparada para enfrentar a realidade da ilha. Ela é mimada e egoísta no início, demonstrando dificuldade em lidar com a adversidade.
+  <b><li>Características princípais:</li></b>  Superficial, teimosa, vulnerável.
+				</ul>
+                
+                <li>Boone Carlyle</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Boone é o meio-irmão de Shannon e tenta cuidar dela após o acidente. Ele tem um senso de responsabilidade e mostra-se disposto a ajudar, apesar das dificuldades.
+  <b><li>Características princípais:</li></b>  Responsável, protetor, persistente.
+				</ul>
+                
+                 <li>Rose Nadler</li>
+                <ul>
+  <b><li>Descrição:</li></b>   Rose é uma mulher mais velha que é socorrida por Jack logo após o acidente. Ela permanece calma durante o caos e tem uma presença serena, apesar da situação.
+  <b><li>Características princípais:</li></b>  Tranquila, forte emocionalmente, otimista.
+				</ul>
+                
+                <li>Rose Nadler</li>
+                <ul>
+  <b><li>Descrição:</li></b>   O piloto do voo Oceanic 815 é encontrado ainda vivo por Jack, Kate e Charlie. Ele revela que o avião estava fora de rota, o que complica qualquer esperança de resgate. Ele é rapidamente atacado por uma criatura misteriosa.
+  <b><li>Características princípais:</li></b>  Desorientado, aflito, útil por um breve período antes de sua morte.
+				</ul>
 
-    <footer>
-        <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
-    </footer>
+			</ol>
+          
+    </p> </p>
+    
+    
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
 </body>
 </html>
